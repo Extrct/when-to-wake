@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "when to wake",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "tells you what time you should aim to wake up for optimal restful sleep and easy waking",
+    "description": "The description of the application"
+  }
+}

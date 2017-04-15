@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">    
   </head>
-  <body style="width: 600px; height: 800px">
+  <body style="width: 600px; height: 500px">
     <div ng-controller="PopupController as m">
-        <h3>when-to-wake</h3>
-        <p> inspired by <a href="http://sleeptiming.com/">sleeptiming</a></p>
-        <h3>It's {{m.now | date : "h:mma"}}</h3>
-        <h4>aim to wake up at {{m.wakeUpAt(m.now.getTime())| date : "h:mma"}}</h4>
-        
-        <p>it takes me </p>
-        <input style="width: 30px"ng-model="m.minsToSleep"/> 
-        <p>minutes to fall asleep.</p>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <div class="navbar-brand">when-to-wake</div>
+          </div>
+        </div>
+      </nav>
+
+      <h2>It's {{m.now | date : "h:mma"}}</h2>
+      <h3>aim to wake up at {{m.wakeUpAt(m.now.getTime())| date : "h:mma"}}</h3>
+      <p>it takes me </p>
+      <input style="width: 30px"ng-model="m.minsToSleep"/> 
+      <p>minutes to fall asleep.</p>
       <script type="text/javascript" src="bower_components/angular/angular.min.js" /></script>
       <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js" /></script>
       <script type="text/javascript" src="scripts/popup.js"></script>

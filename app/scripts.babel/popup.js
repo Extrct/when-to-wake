@@ -9,17 +9,18 @@ angular.module('app', ['ui.bootstrap']).controller('PopupController', function (
 	this.selTime = d;
 	this.minsToSleep = 15;
 
-	this.sleepAt = function (){
-
+	this.sleepAt = function (offset) {
+		return this.selTime.getTime() - (60000 * offset * 90 + 60000 * this.minsToSleep);
 	};
 
-	this.wakeUpAt = function (time, offset) {
-		return time + 60000 * offset * 90 + 60000 * this.minsToSleep;
+	this.wakeUpAt = function (offset) {
+		return this.now.getTime() + 60000 * offset * 90 + 60000 * this.minsToSleep;
 	};
+
 	this.setTab = function (tabId) {
-	    this.tab = tabId;
+		this.tab = tabId;
 	};
 	this.isSet = function (tabId) {
-	    return this.tab === tabId;
+		return this.tab === tabId;
 	};
 });
